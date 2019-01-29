@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+	<meta name="generator" content="Jekyll v3.8.5">
+	<title>Welcome</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+	 crossorigin="anonymous"></script>
+	<!-- Bootstrap core CSS -->
+	<link href="/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	 crossorigin="anonymous">
+
+
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+
+		.container {
+			width: 400px;
+			margin-top: 100px;
+		}
+
+		body {
+			width: 100wh;
+			height: 90vh;
+			color: black;
+			background: linear-gradient(-45deg, rgb(240, 158, 134), rgb(255, 129, 177), #7beff7, #98f2bd);
+			background-size: 400% 400%;
+			-webkit-animation: Gradient 15s ease infinite;
+			-moz-animation: Gradient 15s ease infinite;
+			animation: Gradient 15s ease infinite;
+		}
+
+		@-webkit-keyframes Gradient {
+			0% {
+				background-position: 0% 50%
+			}
+			50% {
+				background-position: 100% 50%
+			}
+			100% {
+				background-position: 0% 50%
+			}
+		}
+
+		@-moz-keyframes Gradient {
+			0% {
+				background-position: 0% 50%
+			}
+			50% {
+				background-position: 100% 50%
+			}
+			100% {
+				background-position: 0% 50%
+			}
+		}
+
+		@keyframes Gradient {
+			0% {
+				background-position: 0% 50%
+			}
+			50% {
+				background-position: 100% 50%
+			}
+			100% {
+				background-position: 0% 50%
+			}
+		}
+
+		.content-section {
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+	<!-- Custom styles for this template -->
+	<link href="floating-labels.css" rel="stylesheet">
+</head>
+
+<body style="color:black">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<h4> Chathub </h4>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="/">Home
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				{% if user.is_authenticated %}
+				<li class="nav-item">
+					<a class="nav-link" href="/chat/">Chat</a>
+				</li>
+				<li class="nav-item">
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'profile' %}">My Profile</a>
+					</li>
+					<a style="color:red" class="nav-link" href="/logout/">Logout</a>
+				</li>
+
+				{% else %}
+				<li class="nav-item">
+					<a class="nav-link" href="/login/">Login</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/register/">Sign Up</a>
+				</li>
+				{% endif %}
+			</ul>
+		</div>
+	</nav>
+	<div class="content-section">
+		<figure class="figure">
+			<img src="data:image/png;base64,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"
+			 class="figure-img img-fluid rounded" alt="...">
+			<br/>
+			<figcaption style="color:black; font-size: 18px;" class="figure-caption">Join a chat room and start chatting.</figcaption>
+		</figure>
+	</div>
+</body>
+
+</html>

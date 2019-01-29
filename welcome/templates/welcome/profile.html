@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+	<meta name="generator" content="Jekyll v3.8.5">
+	<title>Profile</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+	 crossorigin="anonymous"></script>
+	<!-- Bootstrap core CSS -->
+	<link href="/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	 crossorigin="anonymous">
+
+
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+
+		.container {
+			width: 400px;
+			margin-top: 100px;
+		}
+
+		body {
+			width: 100wh;
+			height: 90vh;
+			color: black;
+			background: linear-gradient(-45deg, rgb(240, 158, 134), rgb(255, 129, 177), #7beff7, #98f2bd);
+			background-size: 400% 400%;
+			-webkit-animation: Gradient 15s ease infinite;
+			-moz-animation: Gradient 15s ease infinite;
+			animation: Gradient 15s ease infinite;
+		}
+
+		@-webkit-keyframes Gradient {
+			0% {
+				background-position: 0% 50%
+			}
+			50% {
+				background-position: 100% 50%
+			}
+			100% {
+				background-position: 0% 50%
+			}
+		}
+
+		@-moz-keyframes Gradient {
+			0% {
+				background-position: 0% 50%
+			}
+			50% {
+				background-position: 100% 50%
+			}
+			100% {
+				background-position: 0% 50%
+			}
+		}
+
+		@keyframes Gradient {
+			0% {
+				background-position: 0% 50%
+			}
+			50% {
+				background-position: 100% 50%
+			}
+			100% {
+				background-position: 0% 50%
+			}
+		}
+
+		.content-section {
+			padding: 20px;
+			width: 400px;
+		}
+
+		.img {
+			object-fit: cover;
+		}
+	</style>
+	<!-- Custom styles for this template -->
+	<link href="floating-labels.css" rel="stylesheet">
+</head>
+
+<body style="color:black">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<h4> Chathub </h4>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="/">Home
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a style="color:red" class="nav-link" href="/logout/">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="content-section">
+		<div class="media">
+			<img style="width:125px; height:125px; " class="rounded-circle account-img" src="data:image/jpeg;base64,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">
+			<div style="margin-left:20px; margin-top:20px;" class="media-body">
+				<h2 class="account-heading">{{ user.username }}</h2>
+				<p class="text-secondary">{{ user.email }}</p>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
